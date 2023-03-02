@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/weddingQuest/static/js/main.8865e799.js",
+    "main.js": "/weddingQuest/static/js/main.148486fc.js",
     "index.html": "/weddingQuest/index.html",
-    "main.8865e799.js.map": "/weddingQuest/static/js/main.8865e799.js.map"
+    "main.148486fc.js.map": "/weddingQuest/static/js/main.148486fc.js.map"
   },
   "entrypoints": [
-    "static/js/main.8865e799.js"
+    "static/js/main.148486fc.js"
   ]
 }
