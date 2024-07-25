@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/weddingQuest/static/js/main.d4bbb528.js",
-    "index.html": "/weddingQuest/index.html",
-    "main.d4bbb528.js.map": "/weddingQuest/static/js/main.d4bbb528.js.map"
+    "main.js": "/quest/static/js/main.d4bbb528.js",
+    "index.html": "/quest/index.html",
+    "main.d4bbb528.js.map": "/quest/static/js/main.d4bbb528.js.map"
   },
   "entrypoints": [
     "static/js/main.d4bbb528.js"
