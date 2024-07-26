@@ -395,7 +395,7 @@ export const dataTolik = [
   {
     questionNumber: 1,
     questionText: 'Где было сделано это фото?',
-    imageUrl: 'https://2.downloader.disk.yandex.ru/preview/d853df12db9d252f3a8635d235937cef26c7d12d8567efb1fe1bf071a6db14c5/inf/81MwErPpkAmzKgSSX2Lk8KttSHRNAWnOapJXUOxNQ-wS8HPaidbGOt6yGWEmB_oK8LA0iP9sVp90eUdv1WT9jQ%3D%3D?uid=106759252&filename=1.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=106759252&tknv=v2&size=2543x1351',
+    imageUrl: 'https://sun9-46.userapi.com/impg/Z1d_hZZTmVDZcitlS8UyKUszyRBKsnzliGgdoA/pFFIjKI4CHo.jpg?size=946x1266&quality=96&sign=6ca0a974b0b2e76a5b32df7fc0145218&type=album',
     questionAnswers: [
       {
         id: 1,
@@ -423,8 +423,8 @@ export const dataTolik = [
     questionNumber: 2,
     questionText: 'Что скрыто под белым прямоугольником',
     isHiddenPhotoQuestion: true,
-    imageUrl: 'https://1.downloader.disk.yandex.ru/preview/6fa322df42e146b22debf93fc793856d9cabc4bd072b06c77b7067b9fb4bc0a9/inf/Z_FLx71DbUIMqcW7ZGSoRV8x5wZDEIahdXHF7WDTSX9jHuEGhMMy-A-ZYz8i_zqSAe0ykrn5Mn3XzVz0rf6_JQ%3D%3D?uid=106759252&filename=2-hidden.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=106759252&tknv=v2&size=2560x1351',
-    visibleImageUrl: 'https://2.downloader.disk.yandex.ru/preview/ac1b8a916adf2975c7f7c25dd230827be0ed877c45fbb37de8009fcc82d2f79d/inf/TDY_HwcmkYORhISaYQGqwF8x5wZDEIahdXHF7WDTSX-6tvWqgGDyIaSjgt58AVBtEW0aR_cvYdHojtpwG4KgKQ%3D%3D?uid=106759252&filename=2-visible.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=106759252&tknv=v2&size=2560x1351',
+    imageUrl: 'https://sun9-15.userapi.com/impg/mwCG-gmYfQ3cuuGTli-HTEU6LKnucPqFqsZmig/XBf63P1Wv7g.jpg?size=721x960&quality=96&sign=7bbc0cd172045583dcecb5f69f1bec36&type=album',
+    visibleImageUrl: '',
     questionAnswers: [
       {
         id: 1,
