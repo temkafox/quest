@@ -6,11 +6,12 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
-import { data } from '../../data'
+import { data, dataTolik } from '../../data'
 import { MainContainer } from './Main.styles'
 import { Answers } from '../Answers';
 import { Alert, Button } from '@mui/material';
 import { CustomizedDialogs } from '../Dialog';
+import { Image } from '@mui/icons-material';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: '#fff',
@@ -23,6 +24,9 @@ const Item = styled(Paper)(({ theme }) => ({
 interface QuestDataType {
   questionNumber: number;
   questionText: string;
+  imageUrl?: string;
+  isHiddenPhotoQuestion?: boolean;
+  visibleImageUrl?: string;
   questionAnswers: {
     text: string;
     isTrue: boolean;
@@ -33,11 +37,13 @@ interface QuestDataType {
 interface MainProps {
   firstTeam?: string;
   secondTeam?: string;
+  password: string;
 }
 
-export const Main: FC<MainProps> = ({ firstTeam = 'Лиза' }: MainProps) => {
+export const Main: FC<MainProps> = ({ firstTeam, password }: MainProps) => {
   const [isDialogOpen, setIsDialogOpen] = useState(true);
   const [isEndDialogOpen, setIsEndDialogOpen] = useState(false);
+  const [imageUrl, setImageUrl] = useState('');
 
   const [ questNumber, setQuestNumber ] = useState(1);
   const [ isAnswersDisabled, setIsAnswersDisabled ] = useState(false);
@@ -52,12 +58,23 @@ export const Main: FC<MainProps> = ({ firstTeam = 'Лиза' }: MainProps) => {
   const [ step, setStep ] = useState(1);
   const [ isContinueDisabled, setIsContinueDisabled ] = useState(true);
   const [ questData, setQuestData ] = useState<QuestDataType>();
-  const amountOfQuestions = data.length;
+
+  const getData = useCallback(() => {
+    if (password === '112') {
+      return data;
+    }
+    return dataTolik;
+  }, [password]);
+
+  const amountOfQuestions = getData().length;
+
   useEffect(() => {
-    const mappedData = data.find((i) => i.questionNumber === questNumber);
+    const mappedData = getData().find((i) => i.questionNumber === questNumber);
+    console.log(mappedData);
     if (mappedData)
       setQuestData(mappedData);
-  }, [questNumber]);
+  }, [getData, questNumber]);
+
   const nextQuest = useCallback(() => {
     if (questNumber === amountOfQuestions) {
       return;
@@ -77,6 +94,9 @@ export const Main: FC<MainProps> = ({ firstTeam = 'Лиза' }: MainProps) => {
       setIsEndDialogOpen(true);
       return;
     }
+
+    setImageUrl('');
+
     nextQuest();
     setIsContinueDisabled(true);
     setStep(1);
@@ -93,10 +113,13 @@ export const Main: FC<MainProps> = ({ firstTeam = 'Лиза' }: MainProps) => {
     setIsEndDialogOpen(false);
   }, [])
 
-  const handleAnswer = useCallback((isTrue: boolean) => {
+  const handleAnswer = useCallback((isTrue: boolean, visibleImageUrl?: string) => {
       setIsAnswersDisabled(true);
       setIsContinueDisabled(false);
       setQuestionIsDone(true);
+      if (visibleImageUrl) {
+        setImageUrl(visibleImageUrl);
+      }
     if (isTrue) {
       setTeamScore({
         ...teamScore,
@@ -133,7 +156,7 @@ export const Main: FC<MainProps> = ({ firstTeam = 'Лиза' }: MainProps) => {
         }</Alert> */}
 
         <Stack sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '10px'}}>
-          <Typography variant="subtitle1">Лиза, твой счет: {teamScore.firstTeam.score}</Typography>
+          <Typography variant="subtitle1">{`${password === '112' ? 'Лиза' : 'Толямбус'}`}, твой счет: {teamScore.firstTeam.score}</Typography>
           {/* <Typography variant="subtitle1">{secondTeam}: {teamScore.secondTeam.score}</Typography> */}
         </Stack>
       </CustomizedDialogs>
@@ -148,9 +171,13 @@ export const Main: FC<MainProps> = ({ firstTeam = 'Лиза' }: MainProps) => {
           </Item>
           <Item>
             <Typography variant="h5" gutterBottom>{questData && questData.questionText}</Typography>
+            { questData.isHiddenPhotoQuestion ? (
+              imageUrl ? (imageUrl && (<img src={imageUrl} style={{ maxWidth: '700px', maxHeight: '500px' }} />)) :
+              (questData.imageUrl && (<img src={questData.imageUrl} style={{ maxWidth: '700px', maxHeight: '500px' }} />))
+            ) : (questData.imageUrl && (<img src={questData.imageUrl} style={{ maxWidth: '700px', maxHeight: '500px' }} />))}
           </Item>
           <Item>
-            <Answers questionIsDone={questionIsDone} data={questData.questionAnswers} handleAnswerProp={handleAnswer} isDisabled={isAnswersDisabled} />
+            <Answers questionIsDone={questionIsDone} data={questData.questionAnswers} handleAnswerProp={handleAnswer} visibleImageUrl={questData.visibleImageUrl} isDisabled={isAnswersDisabled} />
           </Item>
           <Item>
             <Button disabled={isContinueDisabled} onClick={handleContinue} color='success' variant="contained">Далее</Button>

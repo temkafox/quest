@@ -23,18 +23,19 @@ type AnswersProps = {
     isTrue: boolean,
     id: number,
   }[],
-  handleAnswerProp: (isTrue: boolean) => void;
+  handleAnswerProp: (isTrue: boolean, visibleImageUrl?: string) => void;
   isDisabled: boolean;
   questionIsDone: boolean;
+  visibleImageUrl?: string;
 }
 
-export const Answers: FC<AnswersProps> = ({ data, handleAnswerProp, isDisabled, questionIsDone }: AnswersProps) => {
+export const Answers: FC<AnswersProps> = ({ data, handleAnswerProp, isDisabled, questionIsDone, visibleImageUrl }: AnswersProps) => {
   const handleAnswer = useCallback((isTrue: boolean) => () => {
     if(isDisabled) {
       return;
     }
-      handleAnswerProp(isTrue);
-    }, [handleAnswerProp, isDisabled])
+      handleAnswerProp(isTrue, visibleImageUrl);
+    }, [handleAnswerProp, isDisabled, visibleImageUrl])
   
   return (
     <Box sx={{ width: '100%', bgcolor: 'background.paper', justifyContent: 'center' }}>
