@@ -1,26 +1,26 @@
 export const data = [
   {
     questionNumber: 1,
-    questionText: 'Ку',
+    questionText: 'Кого или что твой любимый спас бы из огня в первую очередь (после тебя, конечно)?',
     questionAnswers: [
       {
         id: 1,
-        text: '1',
-        isTrue: true,
+        text: 'Аппаратуру для съемки ',
+        isTrue: false,
       },
       {
         id: 2,
-        text: '2',
+        text: ' Подарки от Лизы',
         isTrue: false,
       },
       {
         id: 3,
-        text: '3',
-        isTrue: false,
+        text: 'Документы',
+        isTrue: true,
       },
       {
         id: 4,
-        text: '4',
+        text: 'Кеды Stan Smith',
         isTrue: false,
       },
     ]
