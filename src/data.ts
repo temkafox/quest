@@ -801,8 +801,8 @@ export const dataTolik = [
     questionNumber: 16,
     questionText: 'Возьми телефон в руки. Открой яндекс карты. Найди примерную геолокацию фотографии',
     isHiddenPhotoQuestion: true,
-    imageUrl: 'https://sun9-74.userapi.com/impg/6haI600MiKaNNyVEEMbWsdZnXJ-q-gYH6GIHhQ/OYTZkfpXurI.jpg?size=996x2160&quality=95&sign=8acf4058beca46417887544ce9921147&type=album',
-    visibleImageUrl: 'https://sun9-79.userapi.com/impg/_BmTzQ2QgtUmDg-gCh1p-1TJ990-Fqoc26GTBA/Wqdm_twTCDk.jpg?size=1620x2160&quality=95&sign=4d256e3d7d12460be9be4e04029b1328&type=album',
+    imageUrl: 'https://sun9-79.userapi.com/impg/_BmTzQ2QgtUmDg-gCh1p-1TJ990-Fqoc26GTBA/Wqdm_twTCDk.jpg?size=1620x2160&quality=95&sign=4d256e3d7d12460be9be4e04029b1328&type=album',
+    visibleImageUrl: 'https://sun9-74.userapi.com/impg/6haI600MiKaNNyVEEMbWsdZnXJ-q-gYH6GIHhQ/OYTZkfpXurI.jpg?size=996x2160&quality=95&sign=8acf4058beca46417887544ce9921147&type=album',
     questionAnswers: [
       {
         id: 1,
