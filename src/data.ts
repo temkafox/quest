@@ -798,7 +798,64 @@ export const dataTolik = [
     ]
   },
   {
+    questionNumber: 16,
+    questionText: 'Возьми телефон в руки. Открой яндекс карты. Найди примерную геолокацию фотографии',
+    isHiddenPhotoQuestion: true,
+    imageUrl: 'https://sun9-74.userapi.com/impg/6haI600MiKaNNyVEEMbWsdZnXJ-q-gYH6GIHhQ/OYTZkfpXurI.jpg?size=996x2160&quality=95&sign=8acf4058beca46417887544ce9921147&type=album',
+    visibleImageUrl: 'https://sun9-79.userapi.com/impg/_BmTzQ2QgtUmDg-gCh1p-1TJ990-Fqoc26GTBA/Wqdm_twTCDk.jpg?size=1620x2160&quality=95&sign=4d256e3d7d12460be9be4e04029b1328&type=album',
+    questionAnswers: [
+      {
+        id: 1,
+        text: 'Угадал',
+        isTrue: true,
+      },
+      {
+        id: 2,
+        text: 'Чмо',
+        isTrue: false,
+      },
+    ]
+  },
+  {
     questionNumber: 17,
+    questionText: 'Возьми телефон в руки. Открой яндекс карты. Найди примерную геолокацию фотографии',
+    isHiddenPhotoQuestion: true,
+    imageUrl: 'https://sun9-8.userapi.com/impg/yPAbG_W5f9fJwFBQzLBtLZvPWkDNsFVFZn9ggQ/WWNIo2TqAQY.jpg?size=1620x2160&quality=95&sign=1dca172f121511273d8e1d0fd6c7ac6d&type=album',
+    visibleImageUrl: 'https://sun9-20.userapi.com/impg/-2Ayx18NmjyDr-t5bY5LMoU52XFgrgPimfbRCg/CcB6GRt0oIc.jpg?size=996x2160&quality=95&sign=bc4a28d18a93ca98eee38511010cd3dd&type=album',
+    questionAnswers: [
+      {
+        id: 1,
+        text: 'Угадал',
+        isTrue: true,
+      },
+      {
+        id: 2,
+        text: 'Чмо',
+        isTrue: false,
+      },
+    ]
+  },
+  {
+    questionNumber: 18,
+    questionText: 'Возьми телефон в руки. Открой яндекс карты. Найди примерную геолокацию фотографии',
+    isHiddenPhotoQuestion: true,
+    imageUrl: 'https://sun9-56.userapi.com/impg/-kIMDJh5QFI1g1A35fiDqYUeWwaXj2UwawGHKw/Gx1GgKBtops.jpg?size=1620x2160&quality=95&sign=8c6fd306f0e3b161e2d4c5caab7bd8ee&type=album',
+    visibleImageUrl: 'https://sun9-77.userapi.com/impg/Ig4SR9Cxr6VIBtAe0OuipV1KCyBwagJuvEfOzw/Spt5CoEg_4M.jpg?size=996x2160&quality=95&sign=f64b2d286995cf844abca833516769d1&type=album',
+    questionAnswers: [
+      {
+        id: 1,
+        text: 'Угадал',
+        isTrue: true,
+      },
+      {
+        id: 2,
+        text: 'Чмо',
+        isTrue: false,
+      },
+    ]
+  },
+  {
+    questionNumber: 19,
     questionText: 'ДО ДНА',
     questionAnswers: [
       {
