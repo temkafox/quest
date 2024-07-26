@@ -424,7 +424,7 @@ export const dataTolik = [
     questionText: 'Что скрыто под белым прямоугольником',
     isHiddenPhotoQuestion: true,
     imageUrl: 'https://sun9-15.userapi.com/impg/mwCG-gmYfQ3cuuGTli-HTEU6LKnucPqFqsZmig/XBf63P1Wv7g.jpg?size=721x960&quality=96&sign=7bbc0cd172045583dcecb5f69f1bec36&type=album',
-    visibleImageUrl: '',
+    visibleImageUrl: 'https://sun9-22.userapi.com/impg/kjIJ4hU9CYYvsSBzBTrIHNQ9gUulDPpIKTOh2Q/vj5T2PLjn0k.jpg?size=721x960&quality=96&sign=38ba598c71956e06c5f2640e2e78e57a&type=album',
     questionAnswers: [
       {
         id: 1,
