@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/quest/static/js/main.78ad2d90.js",
+    "main.js": "/quest/static/js/main.c3f77697.js",
     "index.html": "/quest/index.html",
-    "main.78ad2d90.js.map": "/quest/static/js/main.78ad2d90.js.map"
+    "main.c3f77697.js.map": "/quest/static/js/main.c3f77697.js.map"
   },
   "entrypoints": [
-    "static/js/main.78ad2d90.js"
+    "static/js/main.c3f77697.js"
   ]
 }
